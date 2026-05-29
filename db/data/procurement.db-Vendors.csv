@@ -1,0 +1,9 @@
+ID,vendorCode,name,category,email,paymentTerms,rating,status,createdAt,createdBy,modifiedAt,modifiedBy
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f701,VND-0001,TechSupply Co.,IT Equipment,contact@techsupply.com,Net 30,4.5,Active,2024-01-02T09:00:00Z,mahesh.babu,2024-02-10T14:00:00Z,mahesh.babu
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f702,VND-0002,Office Essentials Ltd.,Office Supplies,sales@officeessentials.com,Net 15,3.8,Active,2024-01-02T09:10:00Z,mahesh.babu,2024-02-10T14:10:00Z,mahesh.babu
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f703,VND-0003,Industrial Parts Inc.,Machinery,info@industrialparts.com,COD,4.2,Active,2024-01-02T09:20:00Z,mahesh.babu,2024-02-10T14:20:00Z,mahesh.babu
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f704,VND-0004,Global Logistics Co.,Logistics,support@globallogistics.com,Net 60,2.9,Inactive,2024-01-02T09:30:00Z,mahesh.babu,2024-02-10T14:30:00Z,amar.nath
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f705,VND-0005,Green Energy Solutions,Energy,hello@greenenergy.com,Net 90,4.8,Active,2024-01-02T09:40:00Z,mahesh.babu,2024-02-10T14:40:00Z,mahesh.babu
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f706,VND-0006,FastBuild Materials,Construction,orders@fastbuild.com,Net 60,3.5,Blocked,2024-01-02T09:50:00Z,mahesh.babu,2024-02-10T14:50:00Z,amar.nath
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f707,VND-0007,MediCare Supplies,Medical,contact@medicares.com,Immediate,4.1,Active,2024-01-02T10:00:00Z,mahesh.babu,2024-02-10T15:00:00Z,mahesh.babu
+9b2e4a1f-3c7d-4e8f-a012-b3c4d5e6f708,VND-0008,FoodPro Distributors,Food & Beverage,sales@foodpro.com,Net 15,3.0,Pending,2024-01-02T10:10:00Z,mahesh.babu,2024-02-10T15:10:00Z,mahesh.babu

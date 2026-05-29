@@ -1,0 +1,258 @@
+{
+  "_version": "1.84.0",
+  "sap.app": {
+    "id": "requesterportal",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.24.0",
+      "toolsId": "6dc7a087-762f-46d9-93e9-701794945dbf"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/procurement/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.01"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "requester-display": {
+          "semanticObject": "requester",
+          "action": "display",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.148.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "requesterportal.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "PurchaseRequisitionsList",
+          "target": "PurchaseRequisitionsList"
+        },
+        {
+          "pattern": "PurchaseRequisitions({key}):?query:",
+          "name": "PurchaseRequisitionsObjectPage",
+          "target": "PurchaseRequisitionsObjectPage"
+        },
+        {
+          "pattern": "PurchaseRequisitions({key})/purchaseOrders({key2}):?query:",
+          "name": "PurchaseOrdersObjectPage",
+          "target": "PurchaseOrdersObjectPage"
+        },
+        {
+          "pattern": "PurchaseRequisitions({key})/purchaseOrders({key2})/goodsReceipts({key3}):?query:",
+          "name": "GoodsReceiptsFromPOObjectPage",
+          "target": "GoodsReceiptsFromPOObjectPage"
+        },
+        {
+          "pattern": "GoodsReceipts:?query:",
+          "name": "GoodsReceiptsList",
+          "target": "GoodsReceiptsList"
+        },
+        {
+          "pattern": "GoodsReceipts({key}):?query:",
+          "name": "GoodsReceiptsObjectPage",
+          "target": "GoodsReceiptsObjectPage"
+        }
+      ],
+      "targets": {
+        "PurchaseRequisitionsList": {
+          "type": "Component",
+          "id": "PurchaseRequisitionsList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/PurchaseRequisitions",
+              "variantManagement": "Page",
+              "navigation": {
+                "PurchaseRequisitions": {
+                  "detail": {
+                    "route": "PurchaseRequisitionsObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "selectionMode": "None"
+                  }
+                }
+              },
+              "initialLoad": true
+            }
+          }
+        },
+        "PurchaseRequisitionsObjectPage": {
+          "type": "Component",
+          "id": "PurchaseRequisitionsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "contextPath": "/PurchaseRequisitions",
+              "editableHeaderContent": false,
+              "navigation": {
+                "purchaseOrders": {
+                  "detail": {
+                    "route": "PurchaseOrdersObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PurchaseOrdersObjectPage": {
+          "type": "Component",
+          "id": "PurchaseOrdersObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "contextPath": "/PurchaseRequisitions/purchaseOrders",
+              "editableHeaderContent": false,
+              "navigation": {
+                "goodsReceipts": {
+                  "detail": {
+                    "route": "GoodsReceiptsFromPOObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GoodsReceiptsFromPOObjectPage": {
+          "type": "Component",
+          "id": "GoodsReceiptsFromPOObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "contextPath": "/PurchaseRequisitions/purchaseOrders/goodsReceipts",
+              "editableHeaderContent": false
+            }
+          }
+        },
+        "GoodsReceiptsList": {
+          "type": "Component",
+          "id": "GoodsReceiptsList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/GoodsReceipts",
+              "variantManagement": "Page",
+              "navigation": {
+                "GoodsReceipts": {
+                  "detail": {
+                    "route": "GoodsReceiptsObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "selectionMode": "Single"
+                  }
+                }
+              },
+              "initialLoad": true
+            }
+          }
+        },
+        "GoodsReceiptsObjectPage": {
+          "type": "Component",
+          "id": "GoodsReceiptsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "contextPath": "/GoodsReceipts",
+              "editableHeaderContent": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "ordermanagement.service"
+  }
+}

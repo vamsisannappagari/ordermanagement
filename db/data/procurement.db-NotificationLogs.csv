@@ -1,0 +1,11 @@
+ID,recipient_ID,message,isRead
+550e8400-e29b-41d4-a716-446655440101,550e8400-e29b-41d4-a716-446655440001,Your PR has been approved.,false
+550e8400-e29b-41d4-a716-446655440102,550e8400-e29b-41d4-a716-446655440001,Your Purchase Order has been confirmed.,false
+550e8400-e29b-41d4-a716-446655440103,550e8400-e29b-41d4-a716-446655440002,A new PR is pending your approval.,false
+550e8400-e29b-41d4-a716-446655440104,550e8400-e29b-41d4-a716-446655440002,PR submitted by Vamsi has been escalated.,true
+550e8400-e29b-41d4-a716-446655440105,550e8400-e29b-41d4-a716-446655440003,Your goods receipt has been posted.,false
+550e8400-e29b-41d4-a716-446655440106,550e8400-e29b-41d4-a716-446655440005,Your PR has been rejected.,false
+550e8400-e29b-41d4-a716-446655440107,550e8400-e29b-41d4-a716-446655440005,Your PR has been approved.,true
+550e8400-e29b-41d4-a716-446655440108,550e8400-e29b-41d4-a716-446655440006,A new PR is pending your approval.,true
+550e8400-e29b-41d4-a716-446655440109,550e8400-e29b-41d4-a716-446655440001,Your vendor invoice has been submitted for review.,false
+550e8400-e29b-41d4-a716-446655440110,550e8400-e29b-41d4-a716-446655440002,Your Purchase Order PO-2024-009 has been dispatched.,false

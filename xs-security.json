@@ -1,0 +1,87 @@
+{
+  "xsappname": "procurement-app",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Buyer",
+      "description": "Buyer"
+    },
+    {
+      "name": "$XSAPPNAME.Requester",
+      "description": "Requester"
+    },
+    {
+      "name": "$XSAPPNAME.Approver",
+      "description": "Approver"
+    },
+    {
+      "name": "$XSAPPNAME.Administrator",
+      "description": "Administrator"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Buyer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Buyer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Requester",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Requester"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Approver",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Approver"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Administrator",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Administrator"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "Procurement_Buyer",
+      "description": "Buyer Role Collection",
+      "role-template-references": [
+        "$XSAPPNAME.Buyer"
+      ]
+    },
+    {
+      "name": "Procurement_Requester",
+      "description": "Requester Role Collection",
+      "role-template-references": [
+        "$XSAPPNAME.Requester"
+      ]
+    },
+    {
+      "name": "Procurement_Approver",
+      "description": "Approver Role Collection",
+      "role-template-references": [
+        "$XSAPPNAME.Approver"
+      ]
+    },
+    {
+      "name": "Procurement_Administrator",
+      "description": "Administrator Role Collection",
+      "role-template-references": [
+        "$XSAPPNAME.Administrator"
+      ]
+    }
+  ]
+}

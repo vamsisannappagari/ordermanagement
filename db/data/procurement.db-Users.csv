@@ -1,0 +1,8 @@
+ID,username,firstName,lastName,role,status,createdAt,createdBy,modifiedAt,modifiedBy
+550e8400-e29b-41d4-a716-446655440001,alice,Vamsi,Kiran,Requester,Active,2024-01-01T08:00:00Z,admin@procurement.com,2024-01-15T10:30:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440002,bob,Sai,Nath,Approver,Active,2024-01-01T08:05:00Z,admin@procurement.com,2024-01-15T10:35:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440003,carol,Siva,Sai,Receiver,Active,2024-01-01T08:10:00Z,admin@procurement.com,2024-01-15T10:40:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440004,admin,Mahesh,Babu,Admin,Active,2024-01-01T08:15:00Z,admin@procurement.com,2024-01-15T10:45:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440005,manju.nath,Manju,Nath,Requester,Active,2024-01-01T08:20:00Z,admin@procurement.com,2024-01-15T10:50:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440006,amar.nath,Amar,Nath,Approver,Active,2024-01-01T08:25:00Z,admin@procurement.com,2024-01-15T10:55:00Z,admin@procurement.com
+550e8400-e29b-41d4-a716-446655440007,bala.krishna,Bala,Krishna,Receiver,Inactive,2024-01-01T08:30:00Z,admin@procurement.com,2024-01-15T11:00:00Z,admin@procurement.com

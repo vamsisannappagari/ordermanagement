@@ -1,0 +1,19 @@
+{
+  "name": "approuter",
+  "dependencies": {
+    "@sap/approuter": "^21.0.0"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  },
+  "cds": {
+    "requires": {
+      "destinations": true,
+      "html5-repo": true,
+      "workzone": true
+    }
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^9"
+  }
+}
