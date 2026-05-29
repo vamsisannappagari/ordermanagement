@@ -64,6 +64,8 @@ entity PurchaseRequisitions : cuid, managed {
     statusCriticality : Integer;
 }
 
+
+
 entity PurchaseOrders : cuid, managed {
     vendor          : Association to Vendors;
     prReference     : Association to PurchaseRequisitions;
